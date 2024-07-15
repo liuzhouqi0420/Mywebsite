@@ -85,7 +85,7 @@ def page_4():
     for i in times_list:
         times_dict[int(i[0])] = int(i[1])
     word = st.text_input('请输入要查询的单词')
-    if (word in words_dict):
+    if word in words_dict:
         st.write(words_dict[word])
         #        if word == 'python':
         #            st.code('''
@@ -97,7 +97,7 @@ def page_4():
         #            st.snow()
         n = words_dict[word][0]
         st.write('查询次数：', times_dict[n])
-        if (n in times_dict):
+        if n in times_dict:
             times_dict[n] += 1
         else :
             times_dict[n] = 1
@@ -119,7 +119,7 @@ def page_5():
         if i[1] == '阿短':
             with st.chat_message('🌞'):
                 st.write(i[1],':',i[2])
-        elif (i[1] == '编程猫') :
+        elif i[1] == '编程猫' :
             with st.chat_message('🍥'):
                 st.write(i[1],':',i[2])
     name = st.selectbox('我是……', ['阿短', '编程猫'])
