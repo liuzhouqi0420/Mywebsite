@@ -153,6 +153,7 @@ def page_6():
     if st.button('确认答案'):
         if True in l and True not in m:
             st.write('好厉害哦！答案选对了！')
+            st.balloons()
         elif True in m:
             st.write('不对哦！再看一看题目哦！')
 
